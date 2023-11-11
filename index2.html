@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+  <link rel="stylesheet" href="estili2.css">
+
+
+  <style>
+    /* ... (estilos existentes) */
+    .easy-label {
+      color: white;
+      background-color: #4CAF50; /* Verde */
+    }
+
+    .medium-label {
+      color: #333;
+      background-color: #FFC107; /* Amarelo */
+    }
+
+    .critical-label {
+      color: white;
+      background-color: #F44336; /* Vermelho */
+    }
+  </style>
+  <title>Horários de Trabalho na Enacom</title>
+</head>
+<body>
+
+  <h2>Horários de Trabalho na Enacom</h2>
+
+  <label for="month">Selecione o Mês:</label>
+  <select id="month">
+    <option value="January">Janeiro</option>
+    <option value="February">Fevereiro</option>
+    <option value="March">Março</option>
+    <option value="April">Abril</option>
+    <option value="May">Maio</option>
+    <option value="June">Junho</option>
+    <option value="July">Julho</option>
+    <option value="August">Agosto</option>
+    <option value="September">Setembro</option>
+    <option value="October">Outubro</option>
+    <option value="November">Novembro</option>
+    <option value="December">Dezembro</option>
+  </select>
+  
+
+  <table id="scheduleTable">
+    <tr>
+      <th>Dia</th>
+      <th>Hora</th>
+      <th>Atividade</th>
+      <th class="button-column">Ações</th>
+    </tr>
+    <tr id="row1">
+      <td>Segunda</td>
+      <td>07:00 - 14:00</td>
+      <td class="easy-label">Atividade na segunda-feira</td>
+      <td class="button-column">
+        <button class="button edit-button" onclick="editRow('row1')">Editar</button>
+        <button class="button delete-button" onclick="deleteRow('row1')">Excluir</button>
+      </td>
+    </tr>
+    <tr id="row2">
+      <td>Terça</td>
+      <td>07:00 - 14:00</td>
+      <td class="medium-label">Atividade na terça-feira</td>
+      <td class="button-column">
+        <button class="button edit-button" onclick="editRow('row2')">Editar</button>
+        <button class="button delete-button" onclick="deleteRow('row2')">Excluir</button>
+      </td>
+    </tr>
+    
+    <tr id="row3">
+        <td>Quarta </td>
+        <td>07:00 - 14:00</td>
+        <td class="medium-label">Atividade na quarta-feira</td>
+        <td class="button-column">
+          <button class="button edit-button" onclick="editRow('row2')">Editar</button>
+          <button class="button delete-button" onclick="deleteRow('row2')">Excluir</button>
+        </td>
+      </tr>  
+      
+      <tr id="row4">
+        <td>Quinta</td>
+        <td>07:00 - 14:00</td>
+        <td class="medium-label">Atividade na quinta-feira</td>
+        <td class="button-column">
+          <button class="button edit-button" onclick="editRow('row2')">Editar</button>
+          <button class="button delete-button" onclick="deleteRow('row2')">Excluir</button>
+        </td>
+      </tr>  <tr id="row5">
+        <td>Sexta</td>
+        <td>07:00 - 14:00</td>
+        <td class="medium-label">Atividade na sexta-feira</td>
+        <td class="button-column">
+          <button class="button edit-button" onclick="editRow('row2')">Editar</button>
+          <button class="button delete-button" onclick="deleteRow('row2')">Excluir</button>
+        </td>
+      </tr>
+    <!-- Adicione mais linhas conforme necessário -->
+  </table>
+
+  <label for="difficulty">Escolha a Dificuldade:</label>
+  <select id="difficulty">
+    <option value="easy">Fácil</option>
+    <option value="medium">Médio</option>
+    <option value="critical">Crítico</option>
+  </select>
+
+  <button class="button" onclick="addNewDay()">Adicionar Novo Dia</button>
+  <button class="add-button" onclick="downloadPDF()">Baixar como PDF</button>
+
+
+  <script src="index.js">
+  
+  </script>
+</body>
+</html>
