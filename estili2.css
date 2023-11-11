@@ -4,9 +4,10 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column; /* Organiza os elementos em uma coluna */
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   h2 {
@@ -15,8 +16,8 @@ body {
   }
 
   table {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%; /* Torna a tabela largura total na tela */
+    margin: 20px 0; /* Ajusta a margem */
     border-collapse: collapse;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -49,7 +50,8 @@ body {
   }
 
   .button-column {
-    width: 100px;
+    width: 100%;
+    text-align: center; /* Centraliza o conteúdo da coluna de botões */
   }
 
   .button {
@@ -79,31 +81,16 @@ body {
     background-color: #f44336;
   }
 
-  select {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  label {
-    display: block;
-    margin: 10px 0;
-  }
-
-  input[type="text"] {
-    padding: 8px;
-    font-size: 14px;
-    width: 100%;
+  select, label, input {
+    width: 100%; /* Torna os elementos de entrada largura total na tela */
     box-sizing: border-box;
     margin-bottom: 10px;
   }
 
   .select-container {
     display: flex;
+    flex-direction: column; /* Coloca os elementos de entrada em uma coluna */
     align-items: center;
-  }
-
-  .select-container select {
-    margin-right: 10px;
   }
 
   .add-button {
