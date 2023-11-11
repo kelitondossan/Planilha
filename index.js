@@ -27,7 +27,7 @@ function editRow(rowId) {
   function deleteRow(rowId) {
     // Remover a linha com o ID rowId
     document.getElementById(rowId).remove();
-    alert('Linha com ID ' + rowId + ' excluída com sucesso.');
+    alert('Linha' + ' excluída com sucesso.');
   }
 
   function addNewDay() {
